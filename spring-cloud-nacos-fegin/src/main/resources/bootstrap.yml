@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: nacos-fegin #配置服务名称nacos里面配置文件名要和此名称保持一致
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #配置服务发现地址
+        namespace: 7df29c13-cfd6-49ba-9992-9348269d0481 #命名空间
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        shared-configs:
+        - data-id: application.${spring.cloud.nacos.config.file-extension} #这个配置是必须配置
+        group: DEFAULT_GROUP #配置不同的组
+        namespace: 7df29c13-cfd6-49ba-9992-9348269d0481
+

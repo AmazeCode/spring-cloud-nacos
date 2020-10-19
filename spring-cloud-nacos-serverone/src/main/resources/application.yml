@@ -1,0 +1,9 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: nacos-server #配置服务名称
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848 #配置服务发现地址
+
